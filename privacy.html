@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <meta name="description" content="Chính sách quyền riêng tư của FoxBot Discord.">
+  <title>Chính sách quyền riêng tư — FoxBot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span class="brand-mark">F</span> FoxBot</a>
+    <nav><a href="./">Trang chủ</a></nav>
+  </header>
+  <main class="policy-layout">
+    <aside class="policy-aside"><p class="eyebrow">FOX BOT · QUYỀN RIÊNG TƯ</p><p>Cập nhật lần cuối<br><strong>21 tháng 11, 2026</strong></p><a href="./">← Về trang chủ</a></aside>
+    <article class="policy">
+      <h1>Chính sách<br><span>quyền riêng tư.</span></h1>
+      <p class="intro">Chính sách này giải thích dữ liệu FoxBot xử lý khi bạn sử dụng bot trong Discord. Bot được vận hành bởi <strong>[điền tên chủ bot hoặc tổ chức]</strong> (“chúng tôi”).</p>
+      <div class="policy-callout"><strong>Trước khi đăng công khai</strong><br>Hãy thay thông tin chủ bot và email liên hệ ở cuối trang bằng thông tin thật. Chỉ giữ nội dung phản ánh đúng cấu hình triển khai thực tế của bạn.</div>
+
+      <section><h2>1. Dữ liệu được xử lý</h2><p>Tùy lệnh và cách bạn tương tác, bot có thể nhận hoặc xử lý:</p><ul><li><strong>Dữ liệu Discord:</strong> ID người dùng, ID máy chủ/kênh, tên hiển thị và thông tin thành viên cần thiết để kiểm tra quyền hoặc thực hiện lệnh. Bot cũng đọc nội dung tin nhắn trong DM gửi trực tiếp cho bot và tin nhắn trong máy chủ có nhắc đến bot; khi trả lời tin nhắn, bot có thể đọc tin nhắn được tham chiếu.</li><li><strong>Nội dung hội thoại:</strong> văn bản bạn gửi, câu trả lời của bot, nội dung tin nhắn tham chiếu và thông tin nhắc tên có liên quan. Trong máy chủ, bot xử lý ảnh đính kèm khi được gửi cùng tin nhắn nhắc bot (tối đa 10 MB, định dạng được hỗ trợ).</li><li><strong>Dữ liệu quản lý lớp:</strong> mã/tên lớp, thông tin liên kết Discord và Google Sheets; nếu người có quyền nhập thì hồ sơ sinh viên có thể gồm mã sinh viên, họ tên, ngày sinh, chức vụ, dân tộc, giới tính, email, số điện thoại và địa chỉ thường trú/tạm trú.</li><li><strong>Dữ liệu lịch và quỹ:</strong> tiêu đề, nội dung, thời gian, thiết lập lặp/nhắc lịch; các khoản thu chi, trạng thái đóng quỹ và thông tin sinh viên liên quan khi tính năng quỹ được dùng.</li><li><strong>Dữ liệu kỹ thuật:</strong> lỗi và sự kiện vận hành có thể được ghi vào nhật ký của máy chủ chạy bot. Không nhập thông tin nhạy cảm nếu không cần thiết cho mục đích sử dụng.</li></ul></section>
+
+      <section><h2>2. Cách sử dụng và nơi lưu trữ</h2><p>Nội dung được dùng để trả lời yêu cầu, kiểm tra quyền, thực hiện các chức năng quản lý lớp/lịch/quỹ và duy trì hoạt động của bot.</p><ul><li>Lịch sử hội thoại được giữ tạm trong bộ nhớ tiến trình bot (tối đa 400 mục mỗi kênh hoặc DM) để tạo ngữ cảnh cho câu trả lời; dữ liệu này mất khi tiến trình khởi động lại. Lịch sử không được lưu vào MongoDB theo mã hiện tại.</li><li>Dữ liệu lớp, hồ sơ sinh viên và lịch được lưu trong MongoDB do người vận hành cấu hình. Hồ sơ sinh viên đã đánh dấu xóa có thể vẫn còn một số dữ liệu theo quy trình quản lý hiện tại.</li><li>Thông tin quỹ và dữ liệu liên quan có thể được ghi/đồng bộ vào Google Sheets do người vận hành tạo và cấp quyền. Quyền truy cập bảng tính do chủ bảng tính quản lý.</li></ul><p>Thời gian lưu dữ liệu trong MongoDB và Google Sheets phụ thuộc vào cấu hình máy chủ, chính sách sao lưu và việc chủ bot hoặc quản trị viên xóa dữ liệu. Chủ bot nên thiết lập thời hạn lưu phù hợp và xóa dữ liệu không còn cần thiết.</p></section>
+
+      <section><h2>3. Chia sẻ với dịch vụ khác</h2><p>Để cung cấp tính năng, dữ liệu có thể được truyền đến các dịch vụ sau:</p><ul><li><strong>Discord:</strong> bot nhận sự kiện, thông tin thành viên và nội dung cần xử lý qua nền tảng Discord; phản hồi được gửi lại Discord.</li><li><strong>Google Gemini:</strong> nội dung câu hỏi và ngữ cảnh hội thoại được gửi đến dịch vụ AI của Google để tạo câu trả lời. Ảnh được gửi trong tính năng hỏi ảnh cũng được chuyển đến dịch vụ này. Khi bật công cụ AI, yêu cầu có thể kèm định danh máy chủ/kênh/người dùng hoặc thông tin cần thiết để thực hiện tác vụ được yêu cầu.</li><li><strong>MongoDB:</strong> lưu dữ liệu quản lý lớp, sinh viên và lịch theo cấu hình của người vận hành.</li><li><strong>Google Drive/Sheets:</strong> tạo, đọc, cập nhật bảng tính phục vụ quản lý lớp và quỹ khi tính năng tương ứng được sử dụng.</li></ul><p>Các nhà cung cấp này xử lý dữ liệu theo điều khoản và chính sách riêng của họ. Bot không bán dữ liệu cá nhân. Người vận hành không chủ động chia sẻ dữ liệu ngoài các mục đích nêu trên, trừ khi cần để thực hiện yêu cầu của bạn hoặc tuân thủ nghĩa vụ pháp lý.</p></section>
+
+      <section><h2>4. Quyền truy cập và lựa chọn</h2><p>Bạn có thể ngừng dùng bot hoặc gỡ bot khỏi máy chủ. Quản trị viên máy chủ nên giới hạn quyền bot và quyền truy cập vào kênh, cơ sở dữ liệu, nhật ký và bảng tính. Để yêu cầu xem, sửa hoặc xóa dữ liệu mà bot lưu, hãy liên hệ chủ bot qua địa chỉ bên dưới và nêu rõ máy chủ, dữ liệu cần xử lý. Một số dữ liệu có thể cần được quản trị viên xóa khỏi MongoDB hoặc Google Sheets.</p></section>
+
+      <section><h2>5. Trẻ vị thành niên và thay đổi chính sách</h2><p>Bot không được thiết kế để chủ động thu thập dữ liệu từ trẻ em. Quản trị viên và người dùng chỉ nên nhập dữ liệu cá nhân khi có căn cứ và quyền phù hợp. Chúng tôi có thể cập nhật chính sách này khi cách vận hành thay đổi; phiên bản mới sẽ được đăng tại trang này cùng ngày cập nhật.</p></section>
+
+      <section><h2>6. Liên hệ</h2><p>Chủ bot: <strong>[điền tên cá nhân hoặc tổ chức]</strong><br>Email: <a href="mailto:[email-lien-he]">[điền email liên hệ]</a></p></section>
+      <p class="policy-end">Cảm ơn bạn đã sử dụng FoxBot.</p>
+    </article>
+  </main>
+  <footer class="policy-footer"><span>© 2026 FoxBot</span><a href="./">Trang chủ</a><a href="privacy.html">Chính sách quyền riêng tư</a></footer>
+</body>
+</html>
